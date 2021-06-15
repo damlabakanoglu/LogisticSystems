@@ -1,0 +1,480 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LogisticDataBaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Brand">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="BrandName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="CustomerName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CustomerLastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CustomerAddress" Type="nvarchar" MaxLength="50" />
+    <Property Name="CustomerCity" Type="nvarchar" MaxLength="50" />
+    <Property Name="OrderId" Type="int" />
+  </EntityType>
+  <EntityType Name="Inbound">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="InboundBrand" Type="nvarchar" MaxLength="50" />
+    <Property Name="InboundType" Type="nvarchar" MaxLength="50" />
+    <Property Name="InboundConteynerId" Type="int" />
+    <Property Name="SkuPiece" Type="int" />
+    <Property Name="WorkId" Type="int" />
+    <Property Name="BrandId" Type="int" />
+    <Property Name="TypeId" Type="int" />
+    <Property Name="SkuId" Type="int" />
+    <Property Name="StartDate" Type="date" />
+    <Property Name="FinalDate" Type="date" />
+  </EntityType>
+  <EntityType Name="Incidence">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Sku" Type="int" />
+    <Property Name="BrandName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Quadrant" Type="nvarchar" MaxLength="50" />
+    <Property Name="OrderId" Type="int" />
+    <Property Name="OrderType" Type="nvarchar" MaxLength="50" />
+    <Property Name="IncidenceStatus" Type="nvarchar" MaxLength="50" />
+    <Property Name="IncidenceDate" Type="date" />
+    <Property Name="UserCode" Type="int" />
+    <Property Name="BrandId" Type="int" />
+    <Property Name="SkuId" Type="int" />
+    <Property Name="IncıdenceStatusId" Type="int" />
+  </EntityType>
+  <EntityType Name="IncidenceStatusTbl">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="IncidenceStatusName" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="OrderTypeId" Type="int" />
+    <Property Name="OrderDate" Type="date" />
+    <Property Name="OrderSku" Type="int" />
+    <Property Name="CustomerId" Type="int" />
+    <Property Name="OrderStatus" Type="nvarchar" MaxLength="50" />
+    <Property Name="OrderUnitSize" Type="nvarchar" MaxLength="50" />
+    <Property Name="SkuId" Type="int" />
+    <Property Name="Quadrant" Type="nvarchar" MaxLength="50" />
+    <Property Name="OrderBrandId" Type="int" />
+  </EntityType>
+  <EntityType Name="OrderType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="OrderType" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Pozition">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="PozitionName" Type="nvarchar" MaxLength="50" />
+    <Property Name="BrandId" Type="int" />
+    <Property Name="SkuId" Type="int" />
+    <Property Name="SkuType" Type="nvarchar" MaxLength="50" />
+    <Property Name="SkuPiece" Type="int" />
+    <Property Name="SkuTypeId" Type="int" />
+    <Property Name="Availability" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Sku">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Sku" Type="int" Nullable="false" />
+    <Property Name="SkuType" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="SkuBrand" Type="nvarchar" MaxLength="50" />
+    <Property Name="SkuPiece" Type="int" />
+    <Property Name="SkuTypeId" Type="int" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="SkuType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="SkuTypeName" Type="nvarchar" MaxLength="50" />
+    <Property Name="SkuTypeChar" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Transfer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="TransferType" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TransferStartDate" Type="date" />
+    <Property Name="TransferStatus" Type="nvarchar" MaxLength="50" />
+    <Property Name="OrderId" Type="int" />
+    <Property Name="WorkId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserCode" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserCode" Type="int" Nullable="false" />
+    <Property Name="TerminalCode" Type="int" />
+  </EntityType>
+  <EntityType Name="Work">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="WorkType" Type="nvarchar" MaxLength="50" />
+    <Property Name="WorkName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserCode" Type="int" />
+    <Property Name="TerminalCode" Type="int" />
+    <Property Name="WorkDate" Type="date" />
+    <Property Name="Quadrant" Type="nvarchar" MaxLength="50" />
+    <Property Name="Sku" Type="int" />
+    <Property Name="Pozition" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_Customer_Order">
+    <End Role="Order" Type="Self.Order" Multiplicity="0..1" />
+    <End Role="Customer" Type="Self.Customer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Order">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Customer">
+        <PropertyRef Name="OrderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Inbound_Brand">
+    <End Role="Brand" Type="Self.Brand" Multiplicity="0..1" />
+    <End Role="Inbound" Type="Self.Inbound" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Brand">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Inbound">
+        <PropertyRef Name="BrandId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Inbound_Sku">
+    <End Role="Sku" Type="Self.Sku" Multiplicity="0..1" />
+    <End Role="Inbound" Type="Self.Inbound" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sku">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Inbound">
+        <PropertyRef Name="SkuId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Inbound_SkuType">
+    <End Role="SkuType" Type="Self.SkuType" Multiplicity="0..1" />
+    <End Role="Inbound" Type="Self.Inbound" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SkuType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Inbound">
+        <PropertyRef Name="TypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Inbound_Work">
+    <End Role="Work" Type="Self.Work" Multiplicity="0..1" />
+    <End Role="Inbound" Type="Self.Inbound" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Work">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Inbound">
+        <PropertyRef Name="WorkId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Incidence_Brand">
+    <End Role="Brand" Type="Self.Brand" Multiplicity="0..1" />
+    <End Role="Incidence" Type="Self.Incidence" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Brand">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Incidence">
+        <PropertyRef Name="BrandId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Incidence_IncidenceStatusTbl">
+    <End Role="IncidenceStatusTbl" Type="Self.IncidenceStatusTbl" Multiplicity="0..1" />
+    <End Role="Incidence" Type="Self.Incidence" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IncidenceStatusTbl">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Incidence">
+        <PropertyRef Name="IncıdenceStatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Incidence_Order">
+    <End Role="Order" Type="Self.Order" Multiplicity="0..1" />
+    <End Role="Incidence" Type="Self.Incidence" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Order">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Incidence">
+        <PropertyRef Name="OrderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Incidence_Sku">
+    <End Role="Sku" Type="Self.Sku" Multiplicity="0..1" />
+    <End Role="Incidence" Type="Self.Incidence" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sku">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Incidence">
+        <PropertyRef Name="SkuId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Incidence_Users">
+    <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+    <End Role="Incidence" Type="Self.Incidence" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserCode" />
+      </Principal>
+      <Dependent Role="Incidence">
+        <PropertyRef Name="UserCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Order_Brand">
+    <End Role="Brand" Type="Self.Brand" Multiplicity="0..1" />
+    <End Role="Order" Type="Self.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Brand">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="OrderBrandId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Order_Customer">
+    <End Role="Customer" Type="Self.Customer" Multiplicity="0..1" />
+    <End Role="Order" Type="Self.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Order_OrderType">
+    <End Role="OrderType" Type="Self.OrderType" Multiplicity="0..1" />
+    <End Role="Order" Type="Self.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrderType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="OrderTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Order_Sku">
+    <End Role="Sku" Type="Self.Sku" Multiplicity="0..1" />
+    <End Role="Order" Type="Self.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sku">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="SkuId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pozition_SkuType">
+    <End Role="SkuType" Type="Self.SkuType" Multiplicity="0..1" />
+    <End Role="Pozition" Type="Self.Pozition" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SkuType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Pozition">
+        <PropertyRef Name="SkuTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sku_SkuType">
+    <End Role="SkuType" Type="Self.SkuType" Multiplicity="0..1" />
+    <End Role="Sku" Type="Self.Sku" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SkuType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Sku">
+        <PropertyRef Name="SkuTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Transfer_Order">
+    <End Role="Order" Type="Self.Order" Multiplicity="0..1" />
+    <End Role="Transfer" Type="Self.Transfer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Order">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Transfer">
+        <PropertyRef Name="OrderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Transfer_Work">
+    <End Role="Work" Type="Self.Work" Multiplicity="1" />
+    <End Role="Transfer" Type="Self.Transfer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Work">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Transfer">
+        <PropertyRef Name="WorkId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Work_Users">
+    <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+    <End Role="Work" Type="Self.Work" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserCode" />
+      </Principal>
+      <Dependent Role="Work">
+        <PropertyRef Name="UserCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="LogisticDataBaseModelStoreContainer">
+    <EntitySet Name="Brand" EntityType="Self.Brand" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Inbound" EntityType="Self.Inbound" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Incidence" EntityType="Self.Incidence" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IncidenceStatusTbl" EntityType="Self.IncidenceStatusTbl" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Order" EntityType="Self.Order" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OrderType" EntityType="Self.OrderType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Pozition" EntityType="Self.Pozition" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sku" EntityType="Self.Sku" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SkuType" EntityType="Self.SkuType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Transfer" EntityType="Self.Transfer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Work" EntityType="Self.Work" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Customer_Order" Association="Self.FK_Customer_Order">
+      <End Role="Order" EntitySet="Order" />
+      <End Role="Customer" EntitySet="Customer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Inbound_Brand" Association="Self.FK_Inbound_Brand">
+      <End Role="Brand" EntitySet="Brand" />
+      <End Role="Inbound" EntitySet="Inbound" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Inbound_Sku" Association="Self.FK_Inbound_Sku">
+      <End Role="Sku" EntitySet="Sku" />
+      <End Role="Inbound" EntitySet="Inbound" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Inbound_SkuType" Association="Self.FK_Inbound_SkuType">
+      <End Role="SkuType" EntitySet="SkuType" />
+      <End Role="Inbound" EntitySet="Inbound" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Inbound_Work" Association="Self.FK_Inbound_Work">
+      <End Role="Work" EntitySet="Work" />
+      <End Role="Inbound" EntitySet="Inbound" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Incidence_Brand" Association="Self.FK_Incidence_Brand">
+      <End Role="Brand" EntitySet="Brand" />
+      <End Role="Incidence" EntitySet="Incidence" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Incidence_IncidenceStatusTbl" Association="Self.FK_Incidence_IncidenceStatusTbl">
+      <End Role="IncidenceStatusTbl" EntitySet="IncidenceStatusTbl" />
+      <End Role="Incidence" EntitySet="Incidence" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Incidence_Order" Association="Self.FK_Incidence_Order">
+      <End Role="Order" EntitySet="Order" />
+      <End Role="Incidence" EntitySet="Incidence" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Incidence_Sku" Association="Self.FK_Incidence_Sku">
+      <End Role="Sku" EntitySet="Sku" />
+      <End Role="Incidence" EntitySet="Incidence" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Incidence_Users" Association="Self.FK_Incidence_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Incidence" EntitySet="Incidence" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Order_Brand" Association="Self.FK_Order_Brand">
+      <End Role="Brand" EntitySet="Brand" />
+      <End Role="Order" EntitySet="Order" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Order_Customer" Association="Self.FK_Order_Customer">
+      <End Role="Customer" EntitySet="Customer" />
+      <End Role="Order" EntitySet="Order" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Order_OrderType" Association="Self.FK_Order_OrderType">
+      <End Role="OrderType" EntitySet="OrderType" />
+      <End Role="Order" EntitySet="Order" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Order_Sku" Association="Self.FK_Order_Sku">
+      <End Role="Sku" EntitySet="Sku" />
+      <End Role="Order" EntitySet="Order" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pozition_SkuType" Association="Self.FK_Pozition_SkuType">
+      <End Role="SkuType" EntitySet="SkuType" />
+      <End Role="Pozition" EntitySet="Pozition" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sku_SkuType" Association="Self.FK_Sku_SkuType">
+      <End Role="SkuType" EntitySet="SkuType" />
+      <End Role="Sku" EntitySet="Sku" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Transfer_Order" Association="Self.FK_Transfer_Order">
+      <End Role="Order" EntitySet="Order" />
+      <End Role="Transfer" EntitySet="Transfer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Transfer_Work" Association="Self.FK_Transfer_Work">
+      <End Role="Work" EntitySet="Work" />
+      <End Role="Transfer" EntitySet="Transfer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Work_Users" Association="Self.FK_Work_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Work" EntitySet="Work" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

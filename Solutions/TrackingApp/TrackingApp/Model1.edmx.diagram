@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b042f11609a3427686ac478b58125157" Name="Diagram1">
+        <EntityTypeShape EntityType="LogisticDataBaseModel.Brand" Width="1.5" PointX="3" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LogisticDataBaseModel.Customer" Width="1.5" PointX="10.5" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LogisticDataBaseModel.Inbound" Width="1.5" PointX="5.25" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LogisticDataBaseModel.Incidence" Width="1.5" PointX="5.25" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LogisticDataBaseModel.IncidenceStatusTbl" Width="1.5" PointX="3" PointY="24.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LogisticDataBaseModel.Order" Width="1.5" PointX="8.25" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LogisticDataBaseModel.OrderType" Width="1.5" PointX="6" PointY="22.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LogisticDataBaseModel.Pozition" Width="1.5" PointX="3" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LogisticDataBaseModel.Sku" Width="1.5" PointX="3" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="LogisticDataBaseModel.SkuType" Width="1.5" PointX="0.75" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LogisticDataBaseModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LogisticDataBaseModel.Transfer" Width="1.5" PointX="13.5" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LogisticDataBaseModel.Users" Width="1.5" PointX="0.75" PointY="21" IsExpanded="true" />
+        <EntityTypeShape EntityType="LogisticDataBaseModel.Work" Width="1.5" PointX="3" PointY="20.375" IsExpanded="true" />
+        <AssociationConnector Association="LogisticDataBaseModel.FK_Inbound_Brand" ManuallyRouted="false" />
+        <AssociationConnector Association="LogisticDataBaseModel.FK_Incidence_Brand" ManuallyRouted="false" />
+        <AssociationConnector Association="LogisticDataBaseModel.FK_Order_Brand" ManuallyRouted="false" />
+        <AssociationConnector Association="LogisticDataBaseModel.FK_Customer_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="LogisticDataBaseModel.FK_Order_Customer" ManuallyRouted="false" />
+        <AssociationConnector Association="LogisticDataBaseModel.FK_Inbound_Sku" ManuallyRouted="false" />
+        <AssociationConnector Association="LogisticDataBaseModel.FK_Inbound_SkuType" ManuallyRouted="false" />
+        <AssociationConnector Association="LogisticDataBaseModel.FK_Inbound_Work" ManuallyRouted="false" />
+        <AssociationConnector Association="LogisticDataBaseModel.FK_Incidence_IncidenceStatusTbl" ManuallyRouted="false" />
+        <AssociationConnector Association="LogisticDataBaseModel.FK_Incidence_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="LogisticDataBaseModel.FK_Incidence_Sku" ManuallyRouted="false" />
+        <AssociationConnector Association="LogisticDataBaseModel.FK_Incidence_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="LogisticDataBaseModel.FK_Order_OrderType" ManuallyRouted="false" />
+        <AssociationConnector Association="LogisticDataBaseModel.FK_Order_Sku" ManuallyRouted="false" />
+        <AssociationConnector Association="LogisticDataBaseModel.FK_Transfer_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="LogisticDataBaseModel.FK_Pozition_SkuType" ManuallyRouted="false" />
+        <AssociationConnector Association="LogisticDataBaseModel.FK_Sku_SkuType" ManuallyRouted="false" />
+        <AssociationConnector Association="LogisticDataBaseModel.FK_Transfer_Work" ManuallyRouted="false" />
+        <AssociationConnector Association="LogisticDataBaseModel.FK_Work_Users" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

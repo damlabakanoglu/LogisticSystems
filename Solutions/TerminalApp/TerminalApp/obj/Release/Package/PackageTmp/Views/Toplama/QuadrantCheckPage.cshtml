@@ -1,0 +1,27 @@
+﻿@model TerminalApp.Models.Entities.Order
+@{
+    ViewBag.Title = "QuadrantCheckPage";
+}
+
+<br />
+<br />
+<div>
+    @using (Html.BeginForm("QuadrantPage", "Toplama", FormMethod.Post, new { onsubmit = "Check()" }))
+    {
+        <table>
+            <tr>
+                <td><p>Quadrant Kodu :</p></td>
+                <td>@Html.TextBoxFor(x => x.Quadrant)</td>
+                <td><p class="text-danger">@ViewBag.Error<p></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Giriş" class="btn btn-primary" id="btnSubmit" />
+                </td>
+            </tr>
+
+        </table>
+    }
+</div>
+
+

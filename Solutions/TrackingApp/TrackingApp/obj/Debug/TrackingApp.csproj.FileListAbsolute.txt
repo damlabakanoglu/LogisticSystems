@@ -1,0 +1,38 @@
+C:\Users\damla\OneDrive\Masaüstü\TrackingApp\TrackingApp\obj\Debug\TrackingApp.csprojResolveAssemblyReference.cache
+C:\Users\damla\OneDrive\Masaüstü\TrackingApp\TrackingApp\obj\Debug\TrackingApp.InboundOlustur.resources
+C:\Users\damla\OneDrive\Masaüstü\TrackingApp\TrackingApp\obj\Debug\TrackingApp.Inbounds.resources
+C:\Users\damla\OneDrive\Masaüstü\TrackingApp\TrackingApp\obj\Debug\TrackingApp.Movements.resources
+C:\Users\damla\OneDrive\Masaüstü\TrackingApp\TrackingApp\obj\Debug\TrackingApp.Properties.Resources.resources
+C:\Users\damla\OneDrive\Masaüstü\TrackingApp\TrackingApp\obj\Debug\TrackingApp.SiparişRaporları.resources
+C:\Users\damla\OneDrive\Masaüstü\TrackingApp\TrackingApp\obj\Debug\TrackingApp.SiparişSkuRaporları.resources
+C:\Users\damla\OneDrive\Masaüstü\TrackingApp\TrackingApp\obj\Debug\TrackingApp.TrackingAppMdi.resources
+C:\Users\damla\OneDrive\Masaüstü\TrackingApp\TrackingApp\obj\Debug\TrackingApp.UserForm.resources
+C:\Users\damla\OneDrive\Masaüstü\TrackingApp\TrackingApp\obj\Debug\TrackingApp.csproj.GenerateResource.Cache
+C:\Users\damla\OneDrive\Masaüstü\TrackingApp\TrackingApp\bin\Debug\TrackingApp.exe.config
+C:\Users\damla\OneDrive\Masaüstü\TrackingApp\TrackingApp\bin\Debug\TrackingApp.exe
+C:\Users\damla\OneDrive\Masaüstü\TrackingApp\TrackingApp\bin\Debug\TrackingApp.pdb
+C:\Users\damla\OneDrive\Masaüstü\TrackingApp\TrackingApp\bin\Debug\EntityFramework.dll
+C:\Users\damla\OneDrive\Masaüstü\TrackingApp\TrackingApp\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\damla\OneDrive\Masaüstü\TrackingApp\TrackingApp\bin\Debug\EntityFramework.xml
+C:\Users\damla\OneDrive\Masaüstü\TrackingApp\TrackingApp\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\damla\OneDrive\Masaüstü\TrackingApp\TrackingApp\obj\Debug\TrackingApp.exe
+C:\Users\damla\OneDrive\Masaüstü\TrackingApp\TrackingApp\obj\Debug\TrackingApp.pdb
+C:\Users\damla.bakanoglu\Desktop\Tez Programlar\TrackingApp\TrackingApp\bin\Debug\TrackingApp.exe.config
+C:\Users\damla.bakanoglu\Desktop\Tez Programlar\TrackingApp\TrackingApp\bin\Debug\TrackingApp.exe
+C:\Users\damla.bakanoglu\Desktop\Tez Programlar\TrackingApp\TrackingApp\bin\Debug\TrackingApp.pdb
+C:\Users\damla.bakanoglu\Desktop\Tez Programlar\TrackingApp\TrackingApp\bin\Debug\EntityFramework.dll
+C:\Users\damla.bakanoglu\Desktop\Tez Programlar\TrackingApp\TrackingApp\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\damla.bakanoglu\Desktop\Tez Programlar\TrackingApp\TrackingApp\bin\Debug\EntityFramework.xml
+C:\Users\damla.bakanoglu\Desktop\Tez Programlar\TrackingApp\TrackingApp\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\damla.bakanoglu\Desktop\Tez Programlar\TrackingApp\TrackingApp\obj\Debug\TrackingApp.InboundOlustur.resources
+C:\Users\damla.bakanoglu\Desktop\Tez Programlar\TrackingApp\TrackingApp\obj\Debug\TrackingApp.Inbounds.resources
+C:\Users\damla.bakanoglu\Desktop\Tez Programlar\TrackingApp\TrackingApp\obj\Debug\TrackingApp.Movements.resources
+C:\Users\damla.bakanoglu\Desktop\Tez Programlar\TrackingApp\TrackingApp\obj\Debug\TrackingApp.Properties.Resources.resources
+C:\Users\damla.bakanoglu\Desktop\Tez Programlar\TrackingApp\TrackingApp\obj\Debug\TrackingApp.SiparişRaporları.resources
+C:\Users\damla.bakanoglu\Desktop\Tez Programlar\TrackingApp\TrackingApp\obj\Debug\TrackingApp.TrackingAppMdi.resources
+C:\Users\damla.bakanoglu\Desktop\Tez Programlar\TrackingApp\TrackingApp\obj\Debug\TrackingApp.UserForm.resources
+C:\Users\damla.bakanoglu\Desktop\Tez Programlar\TrackingApp\TrackingApp\obj\Debug\TrackingApp.csproj.GenerateResource.cache
+C:\Users\damla.bakanoglu\Desktop\Tez Programlar\TrackingApp\TrackingApp\obj\Debug\TrackingApp.csproj.CoreCompileInputs.cache
+C:\Users\damla.bakanoglu\Desktop\Tez Programlar\TrackingApp\TrackingApp\obj\Debug\TrackingApp.csproj.CopyComplete
+C:\Users\damla.bakanoglu\Desktop\Tez Programlar\TrackingApp\TrackingApp\obj\Debug\TrackingApp.exe
+C:\Users\damla.bakanoglu\Desktop\Tez Programlar\TrackingApp\TrackingApp\obj\Debug\TrackingApp.pdb

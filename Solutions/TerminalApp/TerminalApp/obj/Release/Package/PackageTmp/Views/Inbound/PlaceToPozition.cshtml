@@ -1,0 +1,31 @@
+﻿@model TerminalApp.Models.Entities.Sku
+@{
+    ViewBag.Title = "PlaceToPozition";
+}
+
+<br />
+<br />
+
+<div>
+    @using (Html.BeginForm("PlaceSku", "Inbound", FormMethod.Post))
+    {
+
+        <table>
+            <tr>
+                <td><p>Sku :</p></td>
+                <td>@Html.TextBoxFor(x => x.Sku1)</td>
+            </tr>
+            <tr>
+                <td><p>Sku Piece :</p></td>
+                <td>@Html.TextBoxFor(x => x.SkuPiece)</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Giriş" class="btn btn-primary" id="btnSubmit" />
+
+                </td>
+            </tr>
+
+        </table>
+    }
+</div>

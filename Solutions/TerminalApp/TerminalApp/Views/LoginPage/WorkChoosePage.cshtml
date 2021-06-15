@@ -1,0 +1,15 @@
+﻿@model TerminalApp.Models.Entities.Users
+
+@{
+    ViewBag.Title = "WorkChoosePage";
+}
+
+<br />
+<br />
+<p>User Name: @ViewBag.User</p>
+<div class="list-group" style="margin-top:25px;">
+    <a href="/Toplama/PickingChoosePage" class="list-group-item">Toplama</a>
+    <a href="/Audit/AuditIndex" class="list-group-item">Audit</a>
+    <a href="/Transfer/TransferTypeChoose" class="list-group-item">Sevkiyat</a>
+    <a href="/Inbound/InboundIndex" class="list-group-item">Inbound</a>
+</div>

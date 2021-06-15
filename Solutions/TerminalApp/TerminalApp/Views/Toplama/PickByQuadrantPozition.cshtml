@@ -1,0 +1,25 @@
+﻿@model TerminalApp.Models.Entities.Order
+@{
+    ViewBag.Title = "PickByQuadrantPozition";
+}
+
+<br />
+<br />
+<div>
+    @using (Html.BeginForm("PickSku", "Toplama", FormMethod.Post))
+    {
+        <table>
+            <tr>
+                <td><p>Sku Giriniz</p></td>
+                <td><p>@ViewBag.Sku</p></td>
+                <td>@Html.TextBoxFor(x => x.OrderSku)</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Giriş" class="btn btn-primary" id="btnSubmit" />
+                </td>
+            </tr>
+
+        </table>
+    }
+</div>

@@ -1,0 +1,26 @@
+﻿@model TerminalApp.Models.Entities.Order
+
+@{
+    ViewBag.Title = "QuadrantPage";
+}
+
+<br />
+<br />
+<p class="text-danger">@ViewBag.Error</p>
+<div class="list-group">
+
+    <a href="Clothes" class="list-group-item list-group-item-action">
+        Kıyafet
+        <span class="badge bg-primary rounded-pill">@ViewBag.ClothesCount</span>
+    </a>
+    <a href="Shoes" class="list-group-item list-group-item-action">
+        Ayakkabı
+        <span class="badge bg-primary rounded-pill">@ViewBag.ShoesCount</span>
+    </a>
+    <a href="Jeweleries" class="list-group-item list-group-item-action">
+        Takı
+        <span class="badge bg-primary rounded-pill">@ViewBag.JewelryCount</span>
+    </a>
+
+
+</div>

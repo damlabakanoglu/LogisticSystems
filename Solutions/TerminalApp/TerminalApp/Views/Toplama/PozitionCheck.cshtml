@@ -1,0 +1,25 @@
+﻿@model TerminalApp.Models.Entities.Sku
+@{
+    ViewBag.Title = "PozitionCheck";
+}
+
+<br />
+<br />
+<div>
+    @using (Html.BeginForm("SkuCheckPage", "Toplama", FormMethod.Post))
+    {
+        <table>
+            <tr>
+                <td><p>Sku :</p></td>
+                <td>@Html.TextBoxFor(x => x.Sku1)</td>
+                <td><p class="text-danger">@ViewBag.Error</p></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Giriş" class="btn btn-primary" id="btnSubmit" />
+                </td>
+            </tr>
+
+        </table>
+    }
+</div>

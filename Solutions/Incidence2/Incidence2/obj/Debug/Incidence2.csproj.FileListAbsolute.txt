@@ -1,0 +1,62 @@
+C:\Users\damla.bakanoglu\Desktop\Project\lojistik\lojistik bilişim sistemleri\Incidence2\Incidence2\bin\Debug\Incidence2.exe.config
+C:\Users\damla.bakanoglu\Desktop\Project\lojistik\lojistik bilişim sistemleri\Incidence2\Incidence2\bin\Debug\Incidence2.exe
+C:\Users\damla.bakanoglu\Desktop\Project\lojistik\lojistik bilişim sistemleri\Incidence2\Incidence2\bin\Debug\Incidence2.pdb
+C:\Users\damla.bakanoglu\Desktop\Project\lojistik\lojistik bilişim sistemleri\Incidence2\Incidence2\obj\Debug\Incidence2.csprojAssemblyReference.cache
+C:\Users\damla.bakanoglu\Desktop\Project\lojistik\lojistik bilişim sistemleri\Incidence2\Incidence2\obj\Debug\Incidence2.Form1.resources
+C:\Users\damla.bakanoglu\Desktop\Project\lojistik\lojistik bilişim sistemleri\Incidence2\Incidence2\obj\Debug\Incidence2.Properties.Resources.resources
+C:\Users\damla.bakanoglu\Desktop\Project\lojistik\lojistik bilişim sistemleri\Incidence2\Incidence2\obj\Debug\Incidence2.csproj.GenerateResource.cache
+C:\Users\damla.bakanoglu\Desktop\Project\lojistik\lojistik bilişim sistemleri\Incidence2\Incidence2\obj\Debug\Incidence2.csproj.CoreCompileInputs.cache
+C:\Users\damla.bakanoglu\Desktop\Project\lojistik\lojistik bilişim sistemleri\Incidence2\Incidence2\obj\Debug\Incidence2.exe
+C:\Users\damla.bakanoglu\Desktop\Project\lojistik\lojistik bilişim sistemleri\Incidence2\Incidence2\obj\Debug\Incidence2.pdb
+C:\Users\damla.bakanoglu\Desktop\Project\lojistik\lojistik bilişim sistemleri\Incidence2\Incidence2\bin\Debug\EntityFramework.dll
+C:\Users\damla.bakanoglu\Desktop\Project\lojistik\lojistik bilişim sistemleri\Incidence2\Incidence2\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\damla.bakanoglu\Desktop\Project\lojistik\lojistik bilişim sistemleri\Incidence2\Incidence2\bin\Debug\EntityFramework.xml
+C:\Users\damla.bakanoglu\Desktop\Project\lojistik\lojistik bilişim sistemleri\Incidence2\Incidence2\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\damla.bakanoglu\Desktop\Project\lojistik\lojistik bilişim sistemleri\Incidence2\Incidence2\obj\Debug\Incidence2.csproj.CopyComplete
+C:\Users\damla.bakanoglu\Desktop\Project\lojistik\lojistik bilişim sistemleri\Incidence2\Incidence2\obj\Debug\Incidence2.IncidenceDetail.resources
+C:\Users\damla.bakanoglu\Desktop\Project\Logistic\lojistik bilişim sistemleri\Incidence2\Incidence2\bin\Debug\Incidence2.exe.config
+C:\Users\damla.bakanoglu\Desktop\Project\Logistic\lojistik bilişim sistemleri\Incidence2\Incidence2\bin\Debug\Incidence2.exe
+C:\Users\damla.bakanoglu\Desktop\Project\Logistic\lojistik bilişim sistemleri\Incidence2\Incidence2\bin\Debug\Incidence2.pdb
+C:\Users\damla.bakanoglu\Desktop\Project\Logistic\lojistik bilişim sistemleri\Incidence2\Incidence2\bin\Debug\EntityFramework.dll
+C:\Users\damla.bakanoglu\Desktop\Project\Logistic\lojistik bilişim sistemleri\Incidence2\Incidence2\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\damla.bakanoglu\Desktop\Project\Logistic\lojistik bilişim sistemleri\Incidence2\Incidence2\bin\Debug\EntityFramework.xml
+C:\Users\damla.bakanoglu\Desktop\Project\Logistic\lojistik bilişim sistemleri\Incidence2\Incidence2\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\damla.bakanoglu\Desktop\Project\Logistic\lojistik bilişim sistemleri\Incidence2\Incidence2\obj\Debug\Incidence2.Form1.resources
+C:\Users\damla.bakanoglu\Desktop\Project\Logistic\lojistik bilişim sistemleri\Incidence2\Incidence2\obj\Debug\Incidence2.IncidenceDetail.resources
+C:\Users\damla.bakanoglu\Desktop\Project\Logistic\lojistik bilişim sistemleri\Incidence2\Incidence2\obj\Debug\Incidence2.Properties.Resources.resources
+C:\Users\damla.bakanoglu\Desktop\Project\Logistic\lojistik bilişim sistemleri\Incidence2\Incidence2\obj\Debug\Incidence2.csproj.GenerateResource.cache
+C:\Users\damla.bakanoglu\Desktop\Project\Logistic\lojistik bilişim sistemleri\Incidence2\Incidence2\obj\Debug\Incidence2.csproj.CoreCompileInputs.cache
+C:\Users\damla.bakanoglu\Desktop\Project\Logistic\lojistik bilişim sistemleri\Incidence2\Incidence2\obj\Debug\Incidence2.csproj.CopyComplete
+C:\Users\damla.bakanoglu\Desktop\Project\Logistic\lojistik bilişim sistemleri\Incidence2\Incidence2\obj\Debug\Incidence2.exe
+C:\Users\damla.bakanoglu\Desktop\Project\Logistic\lojistik bilişim sistemleri\Incidence2\Incidence2\obj\Debug\Incidence2.pdb
+C:\Users\damla.bakanoglu\Desktop\Project\Logistic\lojistik bilişim sistemleri\Incidence2\Incidence2\obj\Debug\Incidence2.csprojAssemblyReference.cache
+C:\Users\damla\OneDrive\Masaüstü\tez\lojistik bilişim sistemleri\Incidence2\Incidence2\obj\Debug\Incidence2.csprojResolveAssemblyReference.cache
+C:\Users\damla\OneDrive\Masaüstü\tez\lojistik bilişim sistemleri\Incidence2\Incidence2\obj\Debug\Incidence2.Form1.resources
+C:\Users\damla\OneDrive\Masaüstü\tez\lojistik bilişim sistemleri\Incidence2\Incidence2\obj\Debug\Incidence2.IncidenceDetail.resources
+C:\Users\damla\OneDrive\Masaüstü\tez\lojistik bilişim sistemleri\Incidence2\Incidence2\obj\Debug\Incidence2.Properties.Resources.resources
+C:\Users\damla\OneDrive\Masaüstü\tez\lojistik bilişim sistemleri\Incidence2\Incidence2\obj\Debug\Incidence2.csproj.GenerateResource.Cache
+C:\Users\damla\OneDrive\Masaüstü\tez\lojistik bilişim sistemleri\Incidence2\Incidence2\bin\Debug\Incidence2.exe.config
+C:\Users\damla\OneDrive\Masaüstü\tez\lojistik bilişim sistemleri\Incidence2\Incidence2\bin\Debug\Incidence2.exe
+C:\Users\damla\OneDrive\Masaüstü\tez\lojistik bilişim sistemleri\Incidence2\Incidence2\bin\Debug\Incidence2.pdb
+C:\Users\damla\OneDrive\Masaüstü\tez\lojistik bilişim sistemleri\Incidence2\Incidence2\bin\Debug\EntityFramework.dll
+C:\Users\damla\OneDrive\Masaüstü\tez\lojistik bilişim sistemleri\Incidence2\Incidence2\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\damla\OneDrive\Masaüstü\tez\lojistik bilişim sistemleri\Incidence2\Incidence2\bin\Debug\EntityFramework.xml
+C:\Users\damla\OneDrive\Masaüstü\tez\lojistik bilişim sistemleri\Incidence2\Incidence2\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\damla\OneDrive\Masaüstü\tez\lojistik bilişim sistemleri\Incidence2\Incidence2\obj\Debug\Incidence2.exe
+C:\Users\damla\OneDrive\Masaüstü\tez\lojistik bilişim sistemleri\Incidence2\Incidence2\obj\Debug\Incidence2.pdb
+C:\Users\damla.bakanoglu\Desktop\Tez Programlar\Incidence2\Incidence2\bin\Debug\Incidence2.exe.config
+C:\Users\damla.bakanoglu\Desktop\Tez Programlar\Incidence2\Incidence2\bin\Debug\Incidence2.exe
+C:\Users\damla.bakanoglu\Desktop\Tez Programlar\Incidence2\Incidence2\bin\Debug\Incidence2.pdb
+C:\Users\damla.bakanoglu\Desktop\Tez Programlar\Incidence2\Incidence2\bin\Debug\EntityFramework.dll
+C:\Users\damla.bakanoglu\Desktop\Tez Programlar\Incidence2\Incidence2\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\damla.bakanoglu\Desktop\Tez Programlar\Incidence2\Incidence2\bin\Debug\EntityFramework.xml
+C:\Users\damla.bakanoglu\Desktop\Tez Programlar\Incidence2\Incidence2\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\damla.bakanoglu\Desktop\Tez Programlar\Incidence2\Incidence2\obj\Debug\Incidence2.csprojAssemblyReference.cache
+C:\Users\damla.bakanoglu\Desktop\Tez Programlar\Incidence2\Incidence2\obj\Debug\Incidence2.Form1.resources
+C:\Users\damla.bakanoglu\Desktop\Tez Programlar\Incidence2\Incidence2\obj\Debug\Incidence2.IncidenceDetail.resources
+C:\Users\damla.bakanoglu\Desktop\Tez Programlar\Incidence2\Incidence2\obj\Debug\Incidence2.Properties.Resources.resources
+C:\Users\damla.bakanoglu\Desktop\Tez Programlar\Incidence2\Incidence2\obj\Debug\Incidence2.csproj.GenerateResource.cache
+C:\Users\damla.bakanoglu\Desktop\Tez Programlar\Incidence2\Incidence2\obj\Debug\Incidence2.csproj.CoreCompileInputs.cache
+C:\Users\damla.bakanoglu\Desktop\Tez Programlar\Incidence2\Incidence2\obj\Debug\Incidence2.csproj.CopyComplete
+C:\Users\damla.bakanoglu\Desktop\Tez Programlar\Incidence2\Incidence2\obj\Debug\Incidence2.exe
+C:\Users\damla.bakanoglu\Desktop\Tez Programlar\Incidence2\Incidence2\obj\Debug\Incidence2.pdb

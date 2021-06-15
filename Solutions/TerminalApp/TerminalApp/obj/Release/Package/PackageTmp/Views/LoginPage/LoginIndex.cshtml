@@ -1,0 +1,36 @@
+﻿@model TerminalApp.Models.Entities.Users
+
+@{
+    ViewBag.Title = "LoginIndex";
+}
+
+<h2>Kullanıcı Girişi</h2>
+
+
+
+<div>
+    @using (Html.BeginForm("WorkChoosePage", "LoginPage", FormMethod.Post))
+    {
+      
+            <table>
+                <tr>
+                    <td><p>Kullanıcı Kodu :</p></td>
+                    <td>@Html.TextBoxFor(x => x.UserCode)</td>
+                    <td><p class="text-danger">@ViewBag.Error</p></td>
+                </tr>
+                
+                         
+                <tr>
+                    <td>
+                    <td>
+                        <input type="submit" value="Giriş" class="btn btn-primary" id="btnSubmit" />
+                    </td>
+                </tr>
+
+            </table>
+        
+        
+    }
+</div>
+
+

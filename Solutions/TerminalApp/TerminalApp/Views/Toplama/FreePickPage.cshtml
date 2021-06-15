@@ -1,0 +1,26 @@
+﻿@model TerminalApp.Models.Entities.Pozition
+@{
+    ViewBag.Title = "FreePickPage";
+}
+
+<br />
+<br />
+
+<div>
+    @using (Html.BeginForm("PozitionCheck", "Toplama", FormMethod.Post))
+    {
+        <table>
+            <tr>
+                <td><p>Pozition :</p></td>
+                <td>@Html.TextBoxFor(x => x.PozitionName)</td>
+                <td><p class="text-danger">@ViewBag.Error</p></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Giriş" class="btn btn-primary" id="btnSubmit" />
+                </td>
+            </tr>
+
+        </table>
+    }
+</div>

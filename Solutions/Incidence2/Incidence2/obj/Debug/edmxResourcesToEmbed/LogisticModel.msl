@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="LogiscticModelStoreContainer" CdmEntityContainer="LogiscticEntities">
+    <EntitySetMapping Name="Customer">
+      <EntityTypeMapping TypeName="LogiscticModel.Customer">
+        <MappingFragment StoreEntitySet="Customer">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="CustomerLastName" ColumnName="CustomerLastName" />
+          <ScalarProperty Name="CustomerAddress" ColumnName="CustomerAddress" />
+          <ScalarProperty Name="CustomerCity" ColumnName="CustomerCity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Order">
+      <EntityTypeMapping TypeName="LogiscticModel.Order">
+        <MappingFragment StoreEntitySet="Order">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OrderType" ColumnName="OrderType" />
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+          <ScalarProperty Name="OrderSku" ColumnName="OrderSku" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="OrderStatus" ColumnName="OrderStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pozitions">
+      <EntityTypeMapping TypeName="LogiscticModel.Pozitions">
+        <MappingFragment StoreEntitySet="Pozitions">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Brand" ColumnName="Brand" />
+          <ScalarProperty Name="SkuType" ColumnName="SkuType" />
+          <ScalarProperty Name="ShelfNumber" ColumnName="ShelfNumber" />
+          <ScalarProperty Name="ShelfLetter" ColumnName="ShelfLetter" />
+          <ScalarProperty Name="HallwayNumber" ColumnName="HallwayNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sku">
+      <EntityTypeMapping TypeName="LogiscticModel.Sku">
+        <MappingFragment StoreEntitySet="Sku">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Sku1" ColumnName="Sku" />
+          <ScalarProperty Name="SkuType" ColumnName="SkuType" />
+          <ScalarProperty Name="SkuBrand" ColumnName="SkuBrand" />
+          <ScalarProperty Name="SkuPiece" ColumnName="SkuPiece" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="LogiscticModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="LogiscticModel.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Work">
+      <EntityTypeMapping TypeName="LogiscticModel.Work">
+        <MappingFragment StoreEntitySet="Work">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="WorkType" ColumnName="WorkType" />
+          <ScalarProperty Name="WorkName" ColumnName="WorkName" />
+          <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+          <ScalarProperty Name="WorkStartDate" ColumnName="WorkStartDate" />
+          <ScalarProperty Name="WorkDoneDate" ColumnName="WorkDoneDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Inbound">
+      <EntityTypeMapping TypeName="LogiscticModel.Inbound">
+        <MappingFragment StoreEntitySet="Inbound">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="InboundBrand" ColumnName="InboundBrand" />
+          <ScalarProperty Name="InboundType" ColumnName="InboundType" />
+          <ScalarProperty Name="InboundConteynerId" ColumnName="InboundConteynerId" />
+          <ScalarProperty Name="InboundConteynerPiece" ColumnName="InboundConteynerPiece" />
+          <ScalarProperty Name="InboundSkuPiece" ColumnName="InboundSkuPiece" />
+          <ScalarProperty Name="WorkId" ColumnName="WorkId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Incidence">
+      <EntityTypeMapping TypeName="LogiscticModel.Incidence">
+        <MappingFragment StoreEntitySet="Incidence">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Sku" ColumnName="Sku" />
+          <ScalarProperty Name="Brand" ColumnName="Brand" />
+          <ScalarProperty Name="Quadrant" ColumnName="Quadrant" />
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="OrderType" ColumnName="OrderType" />
+          <ScalarProperty Name="IncidenceStatus" ColumnName="IncidenceStatus" />
+          <ScalarProperty Name="IncidenceDate" ColumnName="IncidenceDate" />
+          <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+          <ScalarProperty Name="WorkId" ColumnName="WorkId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Transfer">
+      <EntityTypeMapping TypeName="LogiscticModel.Transfer">
+        <MappingFragment StoreEntitySet="Transfer">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TransferType" ColumnName="TransferType" />
+          <ScalarProperty Name="TransferStartDate" ColumnName="TransferStartDate" />
+          <ScalarProperty Name="TransferLastDate" ColumnName="TransferLastDate" />
+          <ScalarProperty Name="TransferStatus" ColumnName="TransferStatus" />
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="WorkId" ColumnName="WorkId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

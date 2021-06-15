@@ -1,0 +1,518 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LogisticDataBaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Brand">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="BrandName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Inbound" Relationship="Self.FK_Inbound_Brand" FromRole="Brand" ToRole="Inbound" />
+    <NavigationProperty Name="Incidence" Relationship="Self.FK_Incidence_Brand" FromRole="Brand" ToRole="Incidence" />
+    <NavigationProperty Name="Order" Relationship="Self.FK_Order_Brand" FromRole="Brand" ToRole="Order" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="CustomerName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CustomerLastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CustomerAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CustomerCity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OrderId" Type="Int32" />
+    <NavigationProperty Name="Order" Relationship="Self.FK_Customer_Order" FromRole="Customer" ToRole="Order" />
+    <NavigationProperty Name="Order1" Relationship="Self.FK_Order_Customer" FromRole="Customer" ToRole="Order" />
+  </EntityType>
+  <EntityType Name="Inbound">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="InboundBrand" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="InboundType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="InboundConteynerId" Type="Int32" />
+    <Property Name="SkuPiece" Type="Int32" />
+    <Property Name="WorkId" Type="Int32" />
+    <Property Name="BrandId" Type="Int32" />
+    <Property Name="TypeId" Type="Int32" />
+    <Property Name="SkuId" Type="Int32" />
+    <Property Name="StartDate" Type="DateTime" Precision="0" />
+    <Property Name="FinalDate" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Brand" Relationship="Self.FK_Inbound_Brand" FromRole="Inbound" ToRole="Brand" />
+    <NavigationProperty Name="Sku" Relationship="Self.FK_Inbound_Sku" FromRole="Inbound" ToRole="Sku" />
+    <NavigationProperty Name="SkuType" Relationship="Self.FK_Inbound_SkuType" FromRole="Inbound" ToRole="SkuType" />
+    <NavigationProperty Name="Work" Relationship="Self.FK_Inbound_Work" FromRole="Inbound" ToRole="Work" />
+  </EntityType>
+  <EntityType Name="Incidence">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Sku" Type="Int32" />
+    <Property Name="BrandName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Quadrant" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OrderId" Type="Int32" />
+    <Property Name="OrderType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IncidenceStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IncidenceDate" Type="DateTime" Precision="0" />
+    <Property Name="UserCode" Type="Int32" />
+    <Property Name="BrandId" Type="Int32" />
+    <Property Name="SkuId" Type="Int32" />
+    <Property Name="IncıdenceStatusId" Type="Int32" />
+    <NavigationProperty Name="Brand" Relationship="Self.FK_Incidence_Brand" FromRole="Incidence" ToRole="Brand" />
+    <NavigationProperty Name="IncidenceStatusTbl" Relationship="Self.FK_Incidence_IncidenceStatusTbl" FromRole="Incidence" ToRole="IncidenceStatusTbl" />
+    <NavigationProperty Name="Order" Relationship="Self.FK_Incidence_Order" FromRole="Incidence" ToRole="Order" />
+    <NavigationProperty Name="Sku1" Relationship="Self.FK_Incidence_Sku" FromRole="Incidence" ToRole="Sku" />
+    <NavigationProperty Name="Users" Relationship="Self.FK_Incidence_Users" FromRole="Incidence" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="IncidenceStatusTbl">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="IncidenceStatusName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Incidence" Relationship="Self.FK_Incidence_IncidenceStatusTbl" FromRole="IncidenceStatusTbl" ToRole="Incidence" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="OrderTypeId" Type="Int32" />
+    <Property Name="OrderDate" Type="DateTime" Precision="0" />
+    <Property Name="OrderSku" Type="Int32" />
+    <Property Name="CustomerId" Type="Int32" />
+    <Property Name="OrderStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OrderUnitSize" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SkuId" Type="Int32" />
+    <Property Name="Quadrant" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OrderBrandId" Type="Int32" />
+    <NavigationProperty Name="Brand" Relationship="Self.FK_Order_Brand" FromRole="Order" ToRole="Brand" />
+    <NavigationProperty Name="Customer" Relationship="Self.FK_Customer_Order" FromRole="Order" ToRole="Customer" />
+    <NavigationProperty Name="Customer1" Relationship="Self.FK_Order_Customer" FromRole="Order" ToRole="Customer" />
+    <NavigationProperty Name="Incidence" Relationship="Self.FK_Incidence_Order" FromRole="Order" ToRole="Incidence" />
+    <NavigationProperty Name="OrderType" Relationship="Self.FK_Order_OrderType" FromRole="Order" ToRole="OrderType" />
+    <NavigationProperty Name="Sku" Relationship="Self.FK_Order_Sku" FromRole="Order" ToRole="Sku" />
+    <NavigationProperty Name="Transfer" Relationship="Self.FK_Transfer_Order" FromRole="Order" ToRole="Transfer" />
+  </EntityType>
+  <EntityType Name="OrderType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="OrderType1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Order" Relationship="Self.FK_Order_OrderType" FromRole="OrderType" ToRole="Order" />
+  </EntityType>
+  <EntityType Name="Pozition">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="BrandId" Type="Int32" />
+    <Property Name="SkuType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HallwayNumber" Type="Int32" />
+    <Property Name="ShelfLetter" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ShelfNumber" Type="Int32" />
+    <Property Name="SkuTypeId" Type="Int32" />
+    <NavigationProperty Name="SkuType1" Relationship="Self.FK_Pozition_SkuType" FromRole="Pozition" ToRole="SkuType" />
+  </EntityType>
+  <EntityType Name="Sku">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Sku1" Type="Int32" Nullable="false" />
+    <Property Name="SkuType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SkuBrand" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SkuPiece" Type="Int32" />
+    <Property Name="SkuTypeId" Type="Int32" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Inbound" Relationship="Self.FK_Inbound_Sku" FromRole="Sku" ToRole="Inbound" />
+    <NavigationProperty Name="Incidence" Relationship="Self.FK_Incidence_Sku" FromRole="Sku" ToRole="Incidence" />
+    <NavigationProperty Name="Order" Relationship="Self.FK_Order_Sku" FromRole="Sku" ToRole="Order" />
+    <NavigationProperty Name="SkuType1" Relationship="Self.FK_Sku_SkuType" FromRole="Sku" ToRole="SkuType" />
+  </EntityType>
+  <EntityType Name="SkuType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="SkuTypeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SkuTypeChar" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Inbound" Relationship="Self.FK_Inbound_SkuType" FromRole="SkuType" ToRole="Inbound" />
+    <NavigationProperty Name="Pozition" Relationship="Self.FK_Pozition_SkuType" FromRole="SkuType" ToRole="Pozition" />
+    <NavigationProperty Name="Sku" Relationship="Self.FK_Sku_SkuType" FromRole="SkuType" ToRole="Sku" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Transfer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="TransferType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TransferStartDate" Type="DateTime" Precision="0" />
+    <Property Name="TransferLastDate" Type="DateTime" Precision="0" />
+    <Property Name="TransferStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OrderId" Type="Int32" />
+    <Property Name="WorkId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Order" Relationship="Self.FK_Transfer_Order" FromRole="Transfer" ToRole="Order" />
+    <NavigationProperty Name="Work" Relationship="Self.FK_Transfer_Work" FromRole="Transfer" ToRole="Work" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserCode" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserCode" Type="Int32" Nullable="false" />
+    <Property Name="TerminalCode" Type="Int32" />
+    <NavigationProperty Name="Incidence" Relationship="Self.FK_Incidence_Users" FromRole="Users" ToRole="Incidence" />
+    <NavigationProperty Name="Work" Relationship="Self.FK_Work_Users" FromRole="Users" ToRole="Work" />
+  </EntityType>
+  <EntityType Name="Work">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="WorkType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="WorkName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserCode" Type="Int32" />
+    <Property Name="TerminalCode" Type="Int32" />
+    <Property Name="WorkDate" Type="DateTime" Precision="0" />
+    <Property Name="Quadrant" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Sku" Type="Int32" />
+    <Property Name="Pozition" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Inbound" Relationship="Self.FK_Inbound_Work" FromRole="Work" ToRole="Inbound" />
+    <NavigationProperty Name="Transfer" Relationship="Self.FK_Transfer_Work" FromRole="Work" ToRole="Transfer" />
+    <NavigationProperty Name="Users" Relationship="Self.FK_Work_Users" FromRole="Work" ToRole="Users" />
+  </EntityType>
+  <Association Name="FK_Inbound_Brand">
+    <End Role="Brand" Type="Self.Brand" Multiplicity="0..1" />
+    <End Role="Inbound" Type="Self.Inbound" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Brand">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Inbound">
+        <PropertyRef Name="BrandId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Incidence_Brand">
+    <End Role="Brand" Type="Self.Brand" Multiplicity="0..1" />
+    <End Role="Incidence" Type="Self.Incidence" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Brand">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Incidence">
+        <PropertyRef Name="BrandId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Order_Brand">
+    <End Role="Brand" Type="Self.Brand" Multiplicity="0..1" />
+    <End Role="Order" Type="Self.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Brand">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="OrderBrandId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Customer_Order">
+    <End Role="Order" Type="Self.Order" Multiplicity="0..1" />
+    <End Role="Customer" Type="Self.Customer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Order">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Customer">
+        <PropertyRef Name="OrderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Order_Customer">
+    <End Role="Customer" Type="Self.Customer" Multiplicity="0..1" />
+    <End Role="Order" Type="Self.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Inbound_Sku">
+    <End Role="Sku" Type="Self.Sku" Multiplicity="0..1" />
+    <End Role="Inbound" Type="Self.Inbound" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sku">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Inbound">
+        <PropertyRef Name="SkuId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Inbound_SkuType">
+    <End Role="SkuType" Type="Self.SkuType" Multiplicity="0..1" />
+    <End Role="Inbound" Type="Self.Inbound" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SkuType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Inbound">
+        <PropertyRef Name="TypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Inbound_Work">
+    <End Role="Work" Type="Self.Work" Multiplicity="0..1" />
+    <End Role="Inbound" Type="Self.Inbound" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Work">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Inbound">
+        <PropertyRef Name="WorkId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Incidence_IncidenceStatusTbl">
+    <End Role="IncidenceStatusTbl" Type="Self.IncidenceStatusTbl" Multiplicity="0..1" />
+    <End Role="Incidence" Type="Self.Incidence" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IncidenceStatusTbl">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Incidence">
+        <PropertyRef Name="IncıdenceStatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Incidence_Order">
+    <End Role="Order" Type="Self.Order" Multiplicity="0..1" />
+    <End Role="Incidence" Type="Self.Incidence" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Order">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Incidence">
+        <PropertyRef Name="OrderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Incidence_Sku">
+    <End Role="Sku" Type="Self.Sku" Multiplicity="0..1" />
+    <End Role="Incidence" Type="Self.Incidence" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sku">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Incidence">
+        <PropertyRef Name="SkuId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Incidence_Users">
+    <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+    <End Role="Incidence" Type="Self.Incidence" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserCode" />
+      </Principal>
+      <Dependent Role="Incidence">
+        <PropertyRef Name="UserCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Order_OrderType">
+    <End Role="OrderType" Type="Self.OrderType" Multiplicity="0..1" />
+    <End Role="Order" Type="Self.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrderType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="OrderTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Order_Sku">
+    <End Role="Sku" Type="Self.Sku" Multiplicity="0..1" />
+    <End Role="Order" Type="Self.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sku">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="SkuId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Transfer_Order">
+    <End Role="Order" Type="Self.Order" Multiplicity="0..1" />
+    <End Role="Transfer" Type="Self.Transfer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Order">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Transfer">
+        <PropertyRef Name="OrderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pozition_SkuType">
+    <End Role="SkuType" Type="Self.SkuType" Multiplicity="0..1" />
+    <End Role="Pozition" Type="Self.Pozition" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SkuType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Pozition">
+        <PropertyRef Name="SkuTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sku_SkuType">
+    <End Role="SkuType" Type="Self.SkuType" Multiplicity="0..1" />
+    <End Role="Sku" Type="Self.Sku" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SkuType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Sku">
+        <PropertyRef Name="SkuTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Transfer_Work">
+    <End Role="Work" Type="Self.Work" Multiplicity="1" />
+    <End Role="Transfer" Type="Self.Transfer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Work">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Transfer">
+        <PropertyRef Name="WorkId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Work_Users">
+    <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+    <End Role="Work" Type="Self.Work" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserCode" />
+      </Principal>
+      <Dependent Role="Work">
+        <PropertyRef Name="UserCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="LogisticDataBaseEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Brand" EntityType="Self.Brand" />
+    <EntitySet Name="Customer" EntityType="Self.Customer" />
+    <EntitySet Name="Inbound" EntityType="Self.Inbound" />
+    <EntitySet Name="Incidence" EntityType="Self.Incidence" />
+    <EntitySet Name="IncidenceStatusTbl" EntityType="Self.IncidenceStatusTbl" />
+    <EntitySet Name="Order" EntityType="Self.Order" />
+    <EntitySet Name="OrderType" EntityType="Self.OrderType" />
+    <EntitySet Name="Pozition" EntityType="Self.Pozition" />
+    <EntitySet Name="Sku" EntityType="Self.Sku" />
+    <EntitySet Name="SkuType" EntityType="Self.SkuType" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="Transfer" EntityType="Self.Transfer" />
+    <EntitySet Name="Users" EntityType="Self.Users" />
+    <EntitySet Name="Work" EntityType="Self.Work" />
+    <AssociationSet Name="FK_Inbound_Brand" Association="Self.FK_Inbound_Brand">
+      <End Role="Brand" EntitySet="Brand" />
+      <End Role="Inbound" EntitySet="Inbound" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Incidence_Brand" Association="Self.FK_Incidence_Brand">
+      <End Role="Brand" EntitySet="Brand" />
+      <End Role="Incidence" EntitySet="Incidence" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Order_Brand" Association="Self.FK_Order_Brand">
+      <End Role="Brand" EntitySet="Brand" />
+      <End Role="Order" EntitySet="Order" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Customer_Order" Association="Self.FK_Customer_Order">
+      <End Role="Order" EntitySet="Order" />
+      <End Role="Customer" EntitySet="Customer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Order_Customer" Association="Self.FK_Order_Customer">
+      <End Role="Customer" EntitySet="Customer" />
+      <End Role="Order" EntitySet="Order" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Inbound_Sku" Association="Self.FK_Inbound_Sku">
+      <End Role="Sku" EntitySet="Sku" />
+      <End Role="Inbound" EntitySet="Inbound" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Inbound_SkuType" Association="Self.FK_Inbound_SkuType">
+      <End Role="SkuType" EntitySet="SkuType" />
+      <End Role="Inbound" EntitySet="Inbound" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Inbound_Work" Association="Self.FK_Inbound_Work">
+      <End Role="Work" EntitySet="Work" />
+      <End Role="Inbound" EntitySet="Inbound" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Incidence_IncidenceStatusTbl" Association="Self.FK_Incidence_IncidenceStatusTbl">
+      <End Role="IncidenceStatusTbl" EntitySet="IncidenceStatusTbl" />
+      <End Role="Incidence" EntitySet="Incidence" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Incidence_Order" Association="Self.FK_Incidence_Order">
+      <End Role="Order" EntitySet="Order" />
+      <End Role="Incidence" EntitySet="Incidence" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Incidence_Sku" Association="Self.FK_Incidence_Sku">
+      <End Role="Sku" EntitySet="Sku" />
+      <End Role="Incidence" EntitySet="Incidence" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Incidence_Users" Association="Self.FK_Incidence_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Incidence" EntitySet="Incidence" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Order_OrderType" Association="Self.FK_Order_OrderType">
+      <End Role="OrderType" EntitySet="OrderType" />
+      <End Role="Order" EntitySet="Order" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Order_Sku" Association="Self.FK_Order_Sku">
+      <End Role="Sku" EntitySet="Sku" />
+      <End Role="Order" EntitySet="Order" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Transfer_Order" Association="Self.FK_Transfer_Order">
+      <End Role="Order" EntitySet="Order" />
+      <End Role="Transfer" EntitySet="Transfer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pozition_SkuType" Association="Self.FK_Pozition_SkuType">
+      <End Role="SkuType" EntitySet="SkuType" />
+      <End Role="Pozition" EntitySet="Pozition" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sku_SkuType" Association="Self.FK_Sku_SkuType">
+      <End Role="SkuType" EntitySet="SkuType" />
+      <End Role="Sku" EntitySet="Sku" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Transfer_Work" Association="Self.FK_Transfer_Work">
+      <End Role="Work" EntitySet="Work" />
+      <End Role="Transfer" EntitySet="Transfer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Work_Users" Association="Self.FK_Work_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Work" EntitySet="Work" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
